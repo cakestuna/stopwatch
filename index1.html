@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>s</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+
+<script>
+    let h1 = document.querySelector("h1")
+   let  button1 = document.getElementById("start")
+   let  button2 = document.getElementById("stop")
+
+   button1.addEventListener("click", function(){
+
+    let count = 0
+   let res =  setInterval(function(){
+        count++
+        h1.textContent = count + "s"
+    },1000)
+
+
+button2.addEventListener("click", function(){
+    count.value = 0
+    h1.textContent = 0
+    clearInterval(res)
+})
+  
+
+   })
+</script>
+</html>
